@@ -15,7 +15,7 @@ pipeline {
       stage("Push image") {
             steps {
                 script {
-                    docker.withRegistry('', 'sleivagc') {
+                    docker.withRegistry('', 'dockerhub-personal') {
                             myapp.push("latest")
                             myapp.push("2.0")
                     }
